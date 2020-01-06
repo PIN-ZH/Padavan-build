@@ -39,14 +39,14 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: K2P-5.0
+        TNAME: phicomm_psg1218a
       run: |
         cd /opt/rt-n56u/trunk
-        if [ ! -f configs/templates/$TNAME.config ] ; then
-        echo "configs/templates/$TNAME.config not found "
+        if [ ! -f configs/templates/$phicomm_psg1218a.config ] ; then
+        echo "configs/templates/$phicomm_psg1218a.config not found "
         exit 1
         fi
-        cp -f configs/templates/$TNAME.config .config
+        cp -f configs/templates/$phicomm_psg1218a.config .config
         ################################################################################################
         #因不同型号配置功能不一样，所以先把配置项删除，如果你自己要添加其他的，也要写上删除这一条，切记！！！
         ################################################################################################
